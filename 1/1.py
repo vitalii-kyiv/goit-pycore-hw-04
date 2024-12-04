@@ -18,4 +18,6 @@ def total_salary(path: str) -> tuple:
         return None
 
 
-path_to_file ="1/salary.txt"
+path_to_file ="./salary.txt"
+
+print(total_salary(path_to_file))
