@@ -4,10 +4,8 @@ from colorama import Fore, Style, init
 
 init(autoreset=True)
 
-def print_folder_structure(path):
-    
+def print_folder_structure(path, indent = 0):
     for el in path.iterdir():
-        indent=0
         if el.is_dir():
             print(f"{' ' * indent}{Fore.BLUE}{el.name}{Style.RESET_ALL}/")
             print_folder_structure(el, indent + 4)
